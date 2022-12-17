@@ -1,0 +1,5 @@
+<!--pages/campusService/campusService.wxml-->
+<navigator wx:for="{{content}}" wx:for-index="index" wx:for-item="item" class="navigator" url="information/information?type={{item.english}}" open-type="navigate" >
+  <text>{{index + ' · ' + item.chinese + '[详情]'}}</text>
+</navigator>
+<view class="tip">资料来源：公众号[肥猴输出平台]、[北大地空]</view>

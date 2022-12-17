@@ -1,0 +1,12 @@
+<!--pages/landscape/landscape.wxml-->
+<map id="mainMap" class="map" show-location="{{true}}" markers="{{markers}}" bindregionchange="move"/>
+<view class="buttonBox">
+  <button class="button" style="width:31vw" bindtap="moveToMe">定位到我</button>
+  <navigator class="button" url="withoutMap/withoutMap?showAll=false" style="font-size:3.5vw" open-type="navigate" >暂缺定位的景点</navigator>
+  <navigator class="button" url="withoutMap/withoutMap?showAll=true" open-type="navigate" >所有景点</navigator>
+</view>
+<scroll-view class="navigatorBox" scroll-y="{{true}}" enable-flex="false">
+  <navigator wx:for="{{showList}}" class="navigator" url="goThere/goThere?num={{item.num}}" open-type="navigate" >
+    <text>{{item.count+' · '+item.name+' [详情]'}}</text>
+  </navigator>
+</scroll-view>

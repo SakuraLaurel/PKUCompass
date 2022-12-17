@@ -1,0 +1,14 @@
+<!--pages/myZone/myZone.wxml-->
+<map id="mainMap" class="map" show-location="{{showLocation}}"/>
+
+<view class="buttonBox">
+  <button class="button" style="width:31vw" bindtap="moveToMe">定位到我</button>
+  <navigator class="button" url="logPosition/logPosition" open-type="navigate" >记录位置</navigator>
+  <navigator class="button" url="logTrack/logTrack" open-type="navigate" >记录轨迹</navigator>
+</view>
+<view class="navigatorBox">
+  <navigator class="navigator" url="historyPosition/historyPosition" open-type="navigate" >历史位置</navigator>
+  <navigator class="navigator" url="historyTrack/historyTrack" open-type="navigate" >历史轨迹</navigator>
+  <navigator class="navigator" url="starPosition/starPosition" open-type="navigate" >星标位置</navigator>
+  <navigator class="navigator" url="starTrack/starTrack" open-type="navigate" >星标轨迹</navigator>
+</view>

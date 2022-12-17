@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <button wx:if="{{!hasUserInfo}}" class="button" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="width:90vw">
+    <text>点击登录</text>
+  </button>
+  <block wx:else>
+    <view class="info">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFit"></image>
+      <text class="nickname">{{userInfo.nickName}}</text>
+    </view>
+    <navigator class="navigator" url="../myZone/myZone" open-type="navigate">
+      <text>我的空间</text>
+    </navigator>
+    <navigator class="navigator" url="../campusService/campusService" open-type="navigate">
+      <text>生活服务</text>
+    </navigator>
+    <navigator class="navigator" url="../publicZone/publicZone" open-type="navigate">
+      <text>公共空间</text>
+    </navigator>
+    <navigator class="navigator" url="../landscape/landscape" open-type="navigate">
+      <text>景点导航</text>
+    </navigator>
+    <text class="tip">为了更好地提供服务，请注意将右上角"···"-"设置"-""位置信息"选项设置为"使用小程序期间和离开小程序后"。</text>
+  </block>
+</view>

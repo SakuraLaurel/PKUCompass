@@ -1,0 +1,8 @@
+<!--pages/publicZone/detail/detail.wxml-->
+<map id="mainMap" class="map" show-location="{{true}}" polyline="{{polyline}}" markers="{{markers}}"/>
+<button wx:if="{{!collected}}" class="button" style="width:96vw" bindtap="set">收藏</button>
+<button wx:else class="button" style="width:96vw" bindtap="cancel">取消收藏</button>
+<view class="content">
+  <text>{{meta+'\n'+input}}</text>
+</view>
+<image wx:for="{{photos}}" class="image" src="{{item}}" mode="widthFix"/>

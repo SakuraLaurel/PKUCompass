@@ -1,0 +1,12 @@
+<!--pages/publicZone/publicZone.wxml-->
+<map id="mainMap" class="map" show-location="{{true}}" polyline="{{polylines}}" markers="{{markers}}" bindregionchange="move"/>
+<view class="buttonBox">
+  <button class="button" style="width:31vw;font-size:3.5vw" bindtap="moveToPKU">移动至北大</button>
+  <navigator class="button" url="my/my" open-type="navigate" >查看我的</navigator>
+  <navigator class="button" url="collections/collections" open-type="navigate" >查看收藏</navigator>
+</view>
+<scroll-view class="navigatorBox" scroll-y="{{true}}" enable-flex="false">
+  <navigator wx:for="{{logs}}" class="navigator" url="detail/detail?log={{item.para}}" open-type="navigate" >
+    <text>{{item.meta+' [详情]'+'\n'+item.value}}</text>
+  </navigator>
+</scroll-view>

@@ -1,0 +1,53 @@
+/* pages/myZone/logPosition/logPosition.wxss */
+.map{
+  width: 96vw;
+  height: 50%;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.buttonBox{
+  width: 98vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.button{
+  height: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  font-weight: bold;
+  background-color: #f6f6f6;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+}
+.meta{
+  height: 7vh;
+  width:95.6vw;
+  margin-bottom: 0.5vh;
+  margin-left: 2.2vw;
+  margin-right: 2.2vw;
+  background-color: #f6f6f6;
+  color: black;
+  font-size: 3.5vw;
+  line-height: 150%;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+}
+.input{
+  height: 25vh;
+  width:95.6vw;
+  margin-top: 0.5vh;
+  margin-left: 2.2vw;
+  margin-right: 2.2vw;
+  background-color: #f6f6f6;
+  color: black;
+  font-size: 3.5vw;
+  line-height: 150%;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  text-align: justify;
+}

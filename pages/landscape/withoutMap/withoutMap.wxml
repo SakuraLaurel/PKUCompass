@@ -1,0 +1,6 @@
+<!--pages/landscape/withoutMap/withoutMap.wxml-->
+<scroll-view class="navigatorBox" scroll-y="{{true}}" enable-flex="false">
+  <navigator wx:for="{{positions}}" class="navigator" url="../goThere/goThere?num={{item.num}}" open-type="navigate" >
+    <text>{{item.count+' · '+item.name+' [详情]'}}</text>
+  </navigator>
+</scroll-view>

@@ -1,0 +1,24 @@
+<!--pages/myZone/historyTrack/historyTrack.wxml-->
+<map id="mainMap" class="map" show-location="{{true}}" polyline="{{polylines}}" />
+
+<view class="buttonBox">
+  <button wx:if="{{!star}}" class="button" style="width:31vw" bindtap="setStar">设为星标</button>
+  <button wx:else class="button" style="width:31vw" bindtap="cancelStar">取消星标</button>
+  <button class="button" style="width:31vw" bindtap="cancel">返回上页</button>
+  <button class="button" style="width:31vw">
+    <picker mode="multiSelector" bindchange="pickerSure" bindcolumnchange="pickerChange" value="{{pickerValue}}" range="{{showList}}">
+      <view class="picker">其他记录</view>
+    </picker>
+  </button>
+</view>
+<view class="buttonBox">
+  <button wx:if="{{!share}}" class="button" style="width:31vw" bindtap="setShare">设为公开</button>
+  <button wx:else class="button" style="width:31vw" bindtap="cancelShare">取消公开</button>
+  <button wx:if="{{single}}" class="button" style="width:31vw" bindtap="IWantAll">显示所有</button>
+  <button wx:else class="button" style="width:31vw" bindtap="IChoose">显示单条</button>
+  <button class="button" style="width:31vw" bindtap="delete">删除本条</button>
+</view>
+<view class="content">
+  <text>{{meta+'\n'+input}}</text>
+</view>
+<image wx:for="{{photos}}" class="image" src="{{item}}" mode="widthFix"/>

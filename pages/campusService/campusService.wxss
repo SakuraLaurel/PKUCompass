@@ -1,0 +1,26 @@
+/* pages/campusService/campusService.wxss */
+.navigator{
+  width: 96vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  margin-bottom: 1vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  font-size: 3.5vh;
+  line-height: 200%;
+  color: black;
+  background-color: #fff;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  text-align: justify;
+}
+.tip{
+  font-size: 3.5vw;
+  line-height: 150%;
+  margin-bottom: 1vh;
+  text-align: center;
+  color: grey;
+}

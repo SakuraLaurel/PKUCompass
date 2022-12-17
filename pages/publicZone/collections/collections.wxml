@@ -1,0 +1,7 @@
+<!--pages/publicZone/collections/collections.wxml-->
+<map id="mainMap" class="map" show-location="{{true}}" polyline="{{polylines}}" markers="{{markers}}"/>
+<scroll-view class="navigatorBox" scroll-y="{{true}}" enable-flex="false">
+  <navigator wx:for="{{logs}}" class="navigator" url="more/more?order={{item.order}}&log={{item.para}}" open-type="navigate" >
+    <text>{{item.meta+'\n'+'('+item.order+')'+item.value}}</text>
+  </navigator>
+</scroll-view>

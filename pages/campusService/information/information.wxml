@@ -1,0 +1,39 @@
+<!--pages/campusService/information/information.wxml-->
+<block wx:if="{{kind === 'contact'}}">
+  <block wx:for="{{logs}}" wx:for-index="index" wx:for-item="item">
+    <text class="title">{{item.name}}</text>
+    <view class="contact">
+      <block wx:for="{{item.content}}" wx:for-index="key" wx:for-item="value">
+        <text>{{value.name}}</text>
+        <text>{{value.contact}}</text>
+      </block>
+    </view>
+  </block>
+</block>
+<block wx:else>
+  <block wx:for="{{logs}}" wx:for-index="index" wx:for-item="item">
+    <view wx:if="{{item.type === 'object'}}" class="container">
+      <view class="title">{{item.name}}</view>
+      <view class="picker">
+        <picker-view indicator-style="height: 8vh;" style="width: 100%; height: 40vh;" value="{{item.value}}" bindchange="{{item.change}}">
+          <picker-view-column style="flex: 1 1 33%">
+            <view wx:for="{{item.first}}" style="line-height: 8vh;">{{item}}</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{item.second}}" style="line-height: 8vh;">{{item}}</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{item.third}}" style="line-height: 8vh;">{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+      <view class="chosen">{{item.first[item.value[0]]}}</view>
+      <view class="chosen">{{item.second[item.value[1]]+' : '+item.third[item.value[2]]}}</view>
+      <view class="content"><text>{{item.addition}}</text></view>
+    </view>
+    <view wx:else class="container">
+        <view class="title">{{item.name}}</view>
+        <view class="content">{{item.content}}</view>
+    </view>
+  </block>
+</block>

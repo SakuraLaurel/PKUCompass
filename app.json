@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/landscape/landscape",
+    "pages/myZone/myZone",
+    "pages/publicZone/publicZone",
+    "pages/campusService/campusService",
+    "pages/myZone/logPosition/logPosition",
+    "pages/myZone/logTrack/logTrack",
+    "pages/myZone/historyPosition/historyPosition",
+    "pages/myZone/historyTrack/historyTrack",
+    "pages/myZone/starPosition/starPosition",
+    "pages/myZone/starTrack/starTrack",
+    "pages/publicZone/collections/collections",
+    "pages/publicZone/my/my",
+    "pages/publicZone/detail/detail",
+    "pages/publicZone/collections/more/more",
+    "pages/landscape/withoutMap/withoutMap",
+    "pages/landscape/goThere/goThere",
+    "pages/campusService/information/information"
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "PKUcompass",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于定位"
+    }
+  },
+  "requiredBackgroundModes": [
+    "location"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

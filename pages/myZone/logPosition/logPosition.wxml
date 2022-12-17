@@ -1,0 +1,15 @@
+<!--pages/myZone/logPosition/logPosition.wxml-->
+<map id="mainMap" class="map" show-location="true"/>
+<view class="buttonBox">
+  <button class="button" style="width:31vw" bindtap="moveToMe">定位到我</button>
+  <button class="button" style="width:31vw" bindtap="log">更新位置</button>
+  <button class="button" style="width:31vw" bindtap="clear">清空内容</button>
+</view>
+<textarea class="meta" value="{{meta}}" disabled="true"/>
+<textarea class="input" maxlength="-1" value="{{input}}" bindinput="synchronize" bindblur="downRoll" bindfocus="upRoll"/>
+<view class="buttonBox">
+  <button class="button" style="width:31vw" bindtap="load">{{photoStatus}}</button>
+  <button class="button" style="width:31vw" bindtap="cancel">取消发布</button>
+  <button class="button" style="width:31vw" bindtap="publish">确认发布</button>
+</view>
+<view wx:if="{{keyboardHeight > 1}}" style="height:{{keyboardHeight}}px" />

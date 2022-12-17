@@ -1,0 +1,56 @@
+/* pages/publicZone/publicZone.wxss */
+.map{
+  width: 96vw;
+  height: 50%;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.buttonBox{
+  width: 96vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.button{
+  width: 31vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  font-weight: bold;
+  margin-left: 1vw;
+  background-color: #f6f6f6;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+}
+.navigatorBox{
+  width: 96vw;
+  height: 38vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.navigator{
+  width: 94vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 1vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  font-size: 2.5vh;
+  line-height: 150%;
+  color: black;
+  background-color: #fff;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  text-align: justify;
+}

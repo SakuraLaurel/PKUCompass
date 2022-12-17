@@ -1,0 +1,19 @@
+<!--pages/publicZone/my/my.wxml-->
+<map id="mainMap" class="map" show-location="{{true}}" polyline="{{polylines}}" markers="{{markers}}" />
+
+<view class="buttonBox">
+  <button class="button" style="width:31vw" bindtap="change">
+    <text wx:if="{{!share}}">设为公开</text>
+    <text wx:else>取消公开</text>
+  </button>
+  <button class="button" style="width:31vw" bindtap="delete">删除本条</button>
+  <button class="button" style="width:31vw">
+    <picker mode="multiSelector" bindchange="pickerSure" bindcolumnchange="pickerChange" value="{{pickerValue}}" range="{{showList}}">
+      <view>其他记录</view>
+    </picker>
+  </button>
+</view>
+<view class="content">
+  <text>{{meta+'\n'+value}}</text>
+</view>
+<image wx:for="{{photos}}" class="image" src="{{item}}" mode="widthFix"/>
